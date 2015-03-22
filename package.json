@@ -1,9 +1,9 @@
 {
-  "name": "atom-dark-syntax",
+  "name": "Pnakotic-Manuscripts-Syntax",
   "theme": "syntax",
-  "version": "0.26.0",
-  "description": "Default dark theme for syntax",
-  "repository": "https://github.com/atom/atom-dark-syntax",
+  "version": "0.1",
+  "description": "A syntax theme for Atom inspired by the pages of unspeakable manuscripts",
+  "repository": "https://github.com/ChadMcKinney/Pnakotic-Manuscripts-Syntax",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
