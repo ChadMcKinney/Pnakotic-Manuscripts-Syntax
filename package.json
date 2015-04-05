@@ -1,7 +1,7 @@
 {
   "name": "pnakotic-manuscripts-syntax",
   "theme": "syntax",
-  "version": "0.27.0",
+  "version": "0.28.0",
   "description": "A syntax theme for Atom inspired by the pages of unspeakable manuscripts",
   "repository": "https://github.com/ChadMcKinney/Pnakotic-Manuscripts-Syntax",
   "license": "MIT",
