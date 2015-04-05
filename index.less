@@ -1,3 +1,4 @@
+@import 'colors';
 @import 'syntax-variables';
 
 atom-text-editor, :host {
@@ -29,7 +30,7 @@ atom-text-editor, :host {
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
-    color: #fba0e3;
+    color: @blackberry;
   }
 
   .invisible {
@@ -101,33 +102,39 @@ atom-text-editor, :host {
 }
 
 .bracket-matcher .region {
-  border-bottom: 1px solid #f8de7e;
-  margin-top: -1px;
-  opacity: .7;
+  background: @keppel;
+  opacity: 0.5;
+  border: none;
+  color: #000;
+}
+
+.bracket-matcher ::selection {
+  color: #000;
 }
 
 .comment {
-  color: #7C7C7C;
+  color: @boulder;
 }
 
 .entity {
-  color: #FFD2A7;
+  color: @sea-nymph;
 
   &.name.type {
     text-decoration: underline;
-    color: #FFFFB6;
+    color: @sea-nymph;
   }
 
   &.other.inherited-class {
-    color: #9B5C2E;
+    color: @falcon;
   }
 }
 
 .keyword {
-  color: #96CBFE;
+  color: @nordic;
+  font-weight: bold;
 
   &.control {
-    color: #96CBFE;
+    color: @periglacial-blue;
   }
 
   &.operator {
@@ -136,32 +143,36 @@ atom-text-editor, :host {
 }
 
 .storage {
-  color: #CFCB90;
+  color: @falcon;
+  font-weight: bold;
 
   &.modifier {
-    color: #96CBFE;
+    color: @sea-nymph;
+    font-weight: bold;
   }
 }
 
 .constant {
-  color: #99CC99;
+  color: @periglacial-blue;
+  font-weight: bold;
 
   &.numeric {
-    color: #FF73FD;
+    color: @nordic;
+    font-weight: bold;
   }
 }
 
 .variable {
-  color: #C6C5FE;
+  color: @nordic;
 }
 
 .invalid.deprecated {
   text-decoration: underline;
-  color: #FD5FF1;
+  color: @strikemaster;
 }
 
 .invalid.illegal {
-  color: #FD5FF1;
+  color: @strikemaster;
   background-color: rgba(86, 45, 86, 0.75);
 }
 
@@ -173,19 +184,19 @@ atom-text-editor, :host {
   }
 
   .punctuation.section.embedded {
-    color: #00A0A0;
+    color: @xanadu;
 
     .source {
-      color: #00A0A0;  // Required for the end of embedded strings in Ruby #716
+      color: @xanadu;  // Required for the end of embedded strings in Ruby #716
     }
   }
 }
 
 .string {
-  color: #A8FF60;
+  color: @xanadu;
 
   .constant {
-    color: #00A0A0;
+    color: @nordic;
   }
 
   &.regexp {
@@ -194,7 +205,7 @@ atom-text-editor, :host {
     .constant.character.escape,
     .source.ruby.embedded,
     .string.regexp.arbitrary-repetition {
-      color: #FF8000;
+      color: @falcon;
     }
 
     &.group {
@@ -213,14 +224,14 @@ atom-text-editor, :host {
 }
 
 .support {
-  color: #FFFFB6;
+  color: @persian-plum;
 
   &.function {
-    color: #DAD085;
+    color: @domino;
   }
 
   &.constant {
-    color: #FFD2A7;
+    color: @periglacial-blue;
   }
 
   &.type.property-name.css {
@@ -230,30 +241,30 @@ atom-text-editor, :host {
 
 .source .entity.name.tag,
 .source .punctuation.tag {
-  color: #96CBFE;
+  color: @sea-nymph;
 }
 .source .entity.other.attribute-name {
-  color: #C6C5FE;
+  color:@periglacial-blue;
 }
 
 .entity {
   &.other.attribute-name {
-    color: #C6C5FE;
+    color: @sandstone;
   }
 
   &.name.tag.namespace,
   &.other.attribute-name.namespace {
-    color: #E18964;
+    color:@yellow-metal;
   }
 }
 
 .meta {
   &.preprocessor.c {
-    color: #8996A8;
+    color: @sea-nymph;
   }
 
   &.preprocessor.c .keyword {
-    color: #AFC4DB;
+    color: @blackberry;
   }
 
   &.cast {
@@ -272,47 +283,47 @@ atom-text-editor, :host {
   &.tag .entity,
   &.tag > .punctuation,
   &.tag.inline .entity {
-    color: #C6C5FE;
+    color: @sea-nymph;
   }
   &.tag .name,
   &.tag.inline .name,
   &.tag > .punctuation {
-    color: #96CBFE;
+    color: @periglacial-blue;
   }
 
   &.selector.css .entity.name.tag {
     text-decoration: underline;
-    color: #96CBFE;
+    color: @periglacial-blue;
   }
 
   &.selector.css .entity.other.attribute-name.tag.pseudo-class {
-    color: #8F9D6A;
+    color: @xanadu;
   }
 
   &.selector.css .entity.other.attribute-name.id {
-    color: #8B98AB;
+    color: @xanadu;
   }
 
   &.selector.css .entity.other.attribute-name.class {
-    color: #62B1FE;
+    color: @xanadu;
   }
 
   &.property-group .support.constant.property-value.css,
   &.property-value .support.constant.property-value.css {
-    color: #F9EE98;
+    color: @yellow-metal;
   }
 
   &.preprocessor.at-rule .keyword.control.at-rule {
-    color: #8693A5;
+    color: @xanadu;
   }
 
   &.property-value .support.constant.named-color.css,
   &.property-value .constant {
-    color: #87C38A;
+    color: @falcon;
   }
 
   &.constructor.argument.css {
-    color: #8F9D6A;
+    color: @periglacial-blue;
   }
 
   &.diff,
@@ -322,7 +333,7 @@ atom-text-editor, :host {
   }
 
   &.separator {
-    color: #60A633;
+    color: @crown-of-thorns;
     background-color: #242424;
   }
 
@@ -332,6 +343,6 @@ atom-text-editor, :host {
   }
 
   &.line.error.logfile {
-    background-color: #751012;
+    background-color:@merlot;
   }
 }
