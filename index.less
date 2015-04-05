@@ -4,6 +4,7 @@
 atom-text-editor, :host {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
+  font-weight: bold;
 
   .invisible-character {
     color: @syntax-invisible-character-color;
@@ -30,7 +31,7 @@ atom-text-editor, :host {
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
-    color: @blackberry;
+    color: @persian-plum;
   }
 
   .invisible {
@@ -109,11 +110,12 @@ atom-text-editor, :host {
 }
 
 .comment {
-  color: @boulder;
+  color: @boulder2;
 }
 
 .entity {
   color: @sea-nymph;
+  font-weight: bold;
 
   &.name.type {
     text-decoration: underline;
@@ -131,10 +133,12 @@ atom-text-editor, :host {
 
   &.control {
     color: @periglacial-blue;
+    font-weight: bold;
   }
 
   &.operator {
-    color: #EDEDED;
+    color: @sandstone;
+    font-weight: bold;
   }
 }
 
@@ -160,6 +164,7 @@ atom-text-editor, :host {
 
 .variable {
   color: @nordic;
+  font-weight: bold;
 }
 
 .invalid.deprecated {
@@ -221,17 +226,21 @@ atom-text-editor, :host {
 
 .support {
   color: @persian-plum;
+  font-weight: bold;
 
   &.function {
-    color: @sandstone;
+    color: @sea-nymph;
+    font-weight: bold;
   }
 
   &.constant {
     color: @periglacial-blue;
+    font-weight: bold;
   }
 
   &.type.property-name.css {
-    color: #EDEDED;
+    color: @falcon;
+    font-weight: bold;
   }
 }
 
@@ -260,7 +269,7 @@ atom-text-editor, :host {
   }
 
   &.preprocessor.c .keyword {
-    color: @blackberry;
+    color: @persian-plum;
   }
 
   &.cast {
